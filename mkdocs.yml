@@ -1,6 +1,80 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: etoulas' site
 site_url: https://etoulas.github.io/
+
+#nav:
+#  - Blog
+#    - blog/index.md
+
+copyright: Copyright &copy; 2025 Tim Toulas
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/etoulas/
+      name: etoulas on GitHub
+
+plugins:
+  - search
+  - blog
+  #- optimize
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+      #auto_title: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences 
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
 theme:
   name: material
 
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/
+  font: false
+
+  features:
+    - navigation.instant
+    - navigation.instant.prefetch
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.path
+    - navigation.indexes 
+    - toc.follow
+    - navigation.top
+    - navigation.footer
+
+  palette:
+
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light green
+      accent: lime
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: light green
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
